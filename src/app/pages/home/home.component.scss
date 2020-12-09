@@ -1,0 +1,20 @@
+/* Membership **************************************************/
+
+.info-block {
+  width: 100%;
+  position: relative;
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 1rem;
+  width: 100%;
+}
+
+.info-card > * {
+  text-align: center;
+  position: relative;
+}

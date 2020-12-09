@@ -1,0 +1,187 @@
+/* Misc **************************************************/
+
+::ng-deep .banner {
+  object-fit: fill;
+  width: 100%;
+  height: 20vh;
+}
+
+::ng-deep .link-style {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+::ng-deep .link-style:hover {
+  cursor: pointer;
+}
+
+::ng-deep .content-tablet {
+  display: block;
+}
+
+::ng-deep .content-desktop {
+  display: none;
+}
+
+::ng-deep .logo-regular {
+  object-fit: cover;
+  width: 6em;
+  height: 6em;
+}
+
+::ng-deep .rounded {
+  border-radius: 50%;
+}
+
+::ng-deep .tablet-button--regular {
+  object-fit: cover;
+  width: 3.5em;
+  height: 3.5em;
+  margin: 0.4rem;
+}
+
+::ng-deep [class*="button-regular"] {
+  min-width: 8rem;
+  height: 2.4rem;
+  margin: 0.4rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+}
+
+::ng-deep .button-regular--orange {
+  background-color: rgb(255, 145, 0);
+}
+
+::ng-deep [class*="tablet-button"]:hover {
+  cursor: pointer;
+}
+
+::ng-deep a[class*="link-button"] {
+  border: 1px solid grey;
+  border-radius: 0.2rem;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  color: black;
+  width: auto;
+
+  /* fit to content */
+  margin: 0.4rem auto;
+}
+
+::ng-deep .link-button--orange {
+  background-color: rgb(255, 145, 0);
+}
+
+::ng-deep .text-subtitle {
+  color: grey;
+}
+
+::ng-deep .text-centered {
+  width: 100%;
+  text-align: center;
+}
+
+::ng-deep .text-group {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+::ng-deep .text-less-spacing {
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+::ng-deep .img-background {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+::ng-deep [class*="infobox"] {
+  border: 1px solid lightcoral;
+  border-radius: 0;
+  padding: 0.6rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  text-align: center;
+}
+
+/* Section **************************************************/
+
+::ng-deep .comm-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+// ::ng-deep .comm-section:nth-child(odd) {
+//   border-bottom: 1px solid lightcoral;
+// }
+
+::ng-deep [class*="comm-layout"] {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+::ng-deep .comm-layout--horizontal {
+  flex-direction: column;
+}
+
+::ng-deep .comm-layout--horizontal-reverse {
+  flex-direction: column-reverse;
+}
+
+::ng-deep .comm-layout--vertical {
+  flex-direction: column;
+}
+
+::ng-deep .comm-layout--vertical-reverse {
+  flex-direction: column-reverse;
+}
+
+::ng-deep .flex-centered {
+  justify-content: center;
+  align-items: center;
+}
+
+::ng-deep .flex-space-between {
+  justify-content: space-between;
+}
+
+::ng-deep .flex-space-around {
+  justify-content: space-around;
+}
+
+::ng-deep .flex-space-evenly {
+  justify-content: space-evenly;
+}
+
+::ng-deep .section-title {
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive **************************************************/
+
+::ng-deep [class*="col-"] {
+  width: 100%;
+  float: left;
+}
+
+::ng-deep .comm-section::after {
+  content: "";
+  clear: both;
+  display: table;
+}

@@ -1,0 +1,18 @@
+<div class="login-box">
+  <h1>Login</h1>
+
+  <p>Member ID</p>
+  <input class="input-layout"
+    type="text" pattern="\d+" maxlength="6"
+    [(ngModel)]="userID" required>
+
+  <p>Password</p>
+  <input class="input-layout text-spread"
+    type="password" pattern="\d+" maxlength="100"
+    [(ngModel)]="password" required>
+
+  <button class="button-regular--orange" routerLink="/member">Login</button>
+
+  <a routerLink="/membership">Sign up here!</a>
+  <a routerLink="/account-recovery">Forgotten your password?</a>
+</div>

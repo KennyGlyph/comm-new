@@ -1,0 +1,80 @@
+<mat-accordion>
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Activity Search
+      </mat-panel-title>
+      <mat-panel-description>
+        Filter activity list
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+      <div class="comm-layout--horizontal flex-space-evenly">
+        <mat-form-field appearance="fill">
+          <mat-label>Genre</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let filterItem of genreFilterList" [value]="filterItem.value">
+              {{filterItem.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+          <mat-label>Type</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let filterItem of typeFilterList" [value]="filterItem.value">
+              {{filterItem.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+          <mat-label>Location</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let filterItem of locationFilterList" [value]="filterItem.value">
+              {{filterItem.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+          <mat-label>Date</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let filterItem of datetimeFilterList" [value]="filterItem.value">
+              {{filterItem.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill">
+          <mat-label>Search</mat-label>
+          <input matInput
+            placeholder="Activity Names"
+            value="">
+        </mat-form-field>
+      </div>
+
+  </mat-expansion-panel>
+</mat-accordion>
+
+
+<div class="comm-section col-12">
+  <div class="comm-layout--horizontal flex-space-evenly">
+    <div *ngFor="let activity of activityList"
+      class="infobox--activity comm-layout--vertical flex-space-evenly">
+      <img class="img-background" src="https://via.placeholder.com/300.png?text=Activity Image">
+      
+      <div class="text-group">
+        <h3 class="text-centered text-less-spacing">{{activity.name}}</h3>
+        <h4 class="text-subtitle text-centered text-less-spacing">genre</h4>
+      </div>
+
+      <div class="text-group">
+        <h4 class="text-centered text-less-spacing">Day, Date</h4>
+        <h4 class="text-centered text-less-spacing">Age</h4>
+        <h4 class="text-centered text-less-spacing">{{activity.price | currency:'SGD '}}</h4>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.menu-header {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid grey;
+  flex: 1;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-header {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
+
+  .menu-header:first-child {
+    border-left: 0;
+  }
+  
+  .menu-header:last-child {
+    border-right: 0;
+  }
+}

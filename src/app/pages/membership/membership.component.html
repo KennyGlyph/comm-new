@@ -1,0 +1,57 @@
+<div>
+  
+  <div class="comm-section col-12">
+    <h1 class="section-title">Membership Types</h1>
+    
+    <div class="comm-layout--horizontal flex-space-around">
+      <div class="infobox--membership comm-layout--vertical flex-centered"
+        [routerLink]="['/signup']"
+        [queryParams]="{type: 'free'}">
+        <h3>Free</h3>
+        <h4>Membership</h4>
+        <h4>PAY-AS-YOU-GO</h4>
+        <p>Explore all activities</p>
+      </div>
+      <div class="infobox--membership comm-layout--vertical flex-centered"
+        [routerLink]="['/signup']"
+        [queryParams]="{type: 'sub'}">
+        <h3>Subsidised</h3>
+        <h4>Membership</h4>
+        <h4>UP TO <b>80%</b> SUBSIDY</h4>
+        <p>Household income per capita < $3000</p>
+      </div>
+      <div class="infobox--membership comm-layout--vertical flex-centered"
+        [routerLink]="['/signup']"
+        [queryParams]="{type: 'pub'}">
+        <h3>Public</h3>
+        <h4>Membership</h4>
+        <h4><b>SGD 100/month</b></h4>
+        <p>The ultimate adventure</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comm-section flex-centered col-12">
+    <h1 class="section-title">Membership Benefits</h1>
+    <p>#sales pitch here#</p>
+    <div class="comm-layout--horizontal flex-centered">
+      <div class="comm-layout--vertical flex-centered">
+        <img class="logo-regular rounded" src="https://via.placeholder.com/150.png">
+        <p class="section-title">Join all FREE activity</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="comm-section flex-centered col-12">
+    <h1 class="section-title">Membership Durations</h1>
+    <p>Minimum One Year</p>
+    <p>#Other stuff here#</p>
+  </div>
+
+  <div class="comm-section flex-centered col-12">
+    <h1 class="section-title">FAQs</h1>
+    <p>#FAQs if we have any#</p>
+  </div>
+
+</div>
+
