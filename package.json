@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -31,9 +31,11 @@
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "mysql2": "^2.2.5",
+    "reflect-metadata": "^0.1.13",
     "rxjs": "~6.6.0",
     "sequelize": "^6.3.5",
     "tslib": "^2.0.0",
+    "typeorm": "^0.2.29",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
