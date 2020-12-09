@@ -1,8 +1,7 @@
 {
-  "/api/*": {
-    "target": "http://localhost:8080",
+  "/wp-content/themes/angular-node/api/*": {
+    "target": "https://dev.glyphcommunity.com:4433",
     "secure": false,
-    "logLevel": "debug",
-    "changeOrigin": true
+    "logLevel": "debug"
   }
 }

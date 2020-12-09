@@ -22,7 +22,7 @@ export class DatabaseService {
   }
 
   getData(): Observable<any> {
-    return this.http.get<any>('api/test-get.php', this.httpOptions)
+    return this.http.get<any>('wp-content/themes/angular-node/api/test-get.php', this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandle)

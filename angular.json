@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "comm-test"
+  "defaultProject": "comm-test",
+  "cli": {
+    "analytics": "aa7b00c9-889e-42ac-8be1-928109578d3a"
+  }
 }
