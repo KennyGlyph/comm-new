@@ -11,7 +11,7 @@ import { DatabaseService } from 'src/app/services/database.service';
  
 export class TestComponent {
   constructor(private dbService: DatabaseService) {
-    dbService.getData()
+    dbService.getData('/api/test-get.php')
       .subscribe((data: any) => {
         console.log(data);
       });

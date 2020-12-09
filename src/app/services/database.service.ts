@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import { PathService } from 'src/app/services/path.service';
+import { Text } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Injectable({
   providedIn: 'root'
@@ -10,9 +11,9 @@ import { PathService } from 'src/app/services/path.service';
 export class DatabaseService {
   private httpOptions: Object = {
 
-    // headers: new HttpHeaders({
-    //   'Content-Type': 'application/json'
-    // }),
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    }),
     responseType: 'text'
  }
 
@@ -20,12 +21,12 @@ export class DatabaseService {
   constructor(private http: HttpClient, private pathService: PathService) {
   }
 
-  getData(): Observable<any> {
-    return this.http.get<any>(this.pathService.relPath + '/api/test-get.php', this.httpOptions)
+  getData(path: string): Observable<any> {
+    return this.http.get<any>(path, this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandle)
-      )
+      );
   }
 
   errorHandle(err: any) {
