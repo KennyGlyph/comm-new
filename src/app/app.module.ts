@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -19,8 +20,6 @@ import { MemberEnrolmentComponent } from './pages/member/enrolment/member-enrolm
 
 // Test
 import { TestComponent } from './pages/test/test.component';
-
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Angular Material
 import { MatSelectModule } from '@angular/material/select';

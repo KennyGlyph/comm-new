@@ -1,7 +1,12 @@
 {
-  "/wp-content/themes/angular-node/api/*": {
-    "target": "https://dev.glyphcommunity.com:4433",
+  "/wp-content/themes/angular-node/*": {
+    "target": {
+      "host": "dev.glyphcommunity.com",
+      "protocol": "https:",
+      "port": 4433
+    },
     "secure": false,
+    "changeOrigin": true,
     "logLevel": "debug"
   }
 }

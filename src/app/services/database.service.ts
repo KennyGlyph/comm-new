@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { PathService } from 'src/app/services/path.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DatabaseService {
-  private http: HttpClient;
   private httpOptions: Object = {
 
     // headers: new HttpHeaders({
@@ -17,12 +17,11 @@ export class DatabaseService {
  }
 
 
-  constructor(private p_http: HttpClient) {
-    this.http = p_http;
+  constructor(private http: HttpClient, private pathService: PathService) {
   }
 
   getData(): Observable<any> {
-    return this.http.get<any>('wp-content/themes/angular-node/api/test-get.php', this.httpOptions)
+    return this.http.get<any>(this.pathService.relPath + '/api/test-get.php', this.httpOptions)
       .pipe(
         retry(1),
         catchError(this.errorHandle)
